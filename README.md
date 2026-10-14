@@ -1,6 +1,6 @@
 # WanBattedBall
 
-A notebook that predicts the outcome of a batted ball (out, single, double, triple, home run) from pitch and swing data, built for the [NWDS batted-ball competition on Kaggle](https://www.kaggle.com/competitions/nwds-batted-balls) run by Nick Wan. It finished around top 25. That placement is also stated in the [baseball-analytics](https://github.com/tdub29/baseball-analytics) README, which is where the rest of my baseball modeling lives.
+A notebook that predicts the outcome of a batted ball (out, single, double, triple, home run) from pitch and swing data, built for the [NWDS batted-ball competition on Kaggle](https://www.kaggle.com/competitions/nwds-batted-balls) run by Nick Wan. It finished around top 25. The rest of my baseball modeling lives in [baseball-analytics](https://github.com/tdub29/baseball-analytics).
 
 ## What it does
 
