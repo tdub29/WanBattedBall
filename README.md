@@ -2,6 +2,20 @@
 
 A notebook that predicts the outcome of a batted ball (out, single, double, triple, home run) from pitch and swing data, built for the [NWDS batted-ball competition on Kaggle](https://www.kaggle.com/competitions/nwds-batted-balls) run by Nick Wan. It finished around top 25. The rest of my baseball modeling lives in [baseball-analytics](https://github.com/tdub29/baseball-analytics).
 
+## Modeling workflow
+
+```mermaid
+flowchart LR
+    A["Kaggle pitch and swing data"] --> B["Movement, location and interaction features"]
+    A --> C["Cross-validated pitch and swing residuals"]
+    B --> D["CatBoost multiclass classifier"]
+    C --> D
+    D --> E["Out, single, double, triple and home-run probabilities"]
+    E --> F["submission.csv keyed by uid"]
+```
+
+The feature sources and the notebook's validation setup are described below.
+
 ## What it does
 
 - **Task:** multiclass classification. For each row in `test.csv` it outputs a probability for each of `out`, `single`, `double`, `triple`, `home_run`, written to `submission.csv` keyed by `uid`.
